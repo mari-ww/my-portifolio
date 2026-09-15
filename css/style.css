@@ -164,4 +164,90 @@ section > h2 {
     .hero h2 {
         font-size: 24px;
     }
+    .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        min-height: 320px;
+    }
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 900px;
+}
+
+.skill {
+    border: 1px solid #333;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.skill:hover {
+    transform: translateY(-4px);
+    border-color: #fff;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    border: 1px solid #333;
+    padding: 30px;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card > span {
+    opacity: 0.4;
+    margin-bottom: 40px;
+}
+
+.project-card h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.project-card p {
+    line-height: 1.7;
+    opacity: 0.75;
+}
+
+.project-tech {
+    margin-top: auto;
+    padding-top: 30px;
+    font-size: 13px;
+    opacity: 0.5;
+}
+
+.project-links {
+    margin-top: 20px;
+}
+
+.project-links a {
+    text-decoration: underline;
 }
