@@ -6,220 +6,762 @@
 
     <title>Mariana | Software Developer</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Ovo&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
-    <header>
-        <nav class="navbar">
-            <a href="#home" class="logo">Mariana.</a>
+    <!-- ================= NAVBAR ================= -->
 
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+    <nav class="navbar" id="navbar">
+
+        <a href="#home" class="logo">
+            <span>M</span>ariana
+        </a>
+
+        <div class="desktop-nav">
+            <a href="#home">Home</a>
+            <a href="#about">About me</a>
+            <a href="#services">Services</a>
+            <a href="#work">My Work</a>
+            <a href="#contact">Contact me</a>
+        </div>
+
+        <div class="nav-actions">
+
+            <button
+                class="language-button"
+                onclick="toggleLanguage()"
+                id="languageButton"
+                aria-label="Change language"
+            >
+                Português
+            </button>
+
+            <!-- Theme -->
+            <button
+                class="theme-button"
+                onclick="toggleTheme()"
+                aria-label="Toggle theme"
+            >
+                <svg
+                    id="themeIcon"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <path d="M20.7 15.3A8.7 8.7 0 0 1 8.7 3.3 8.7 8.7 0 1 0 20.7 15.3Z"/>
+                </svg>
+            </button>
+
+            <a href="#contact" class="nav-contact">
+                Contact
+            </a>
+
+            <!-- Mobile menu -->
+            <button
+                class="mobile-menu-button"
+                onclick="openMenu()"
+                aria-label="Open menu"
+            >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 6h16v2H4V6Zm0 5h16v2H4v-2Zm0 5h16v2H4v-2Z"/>
+                </svg>
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= MOBILE MENU ================= -->
+
+    <div class="mobile-menu" id="sideMenu">
+
+        <button
+            class="close-menu"
+            onclick="closeMenu()"
+            aria-label="Close menu"
+        >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m6 6 12 12m0-12L6 18"/>
+            </svg>
+        </button>
+
+        <a href="#home" onclick="closeMenu()">Home</a>
+        <a href="#about" onclick="closeMenu()">About me</a>
+        <a href="#services" onclick="closeMenu()">Services</a>
+        <a href="#work" onclick="closeMenu()">My Work</a>
+        <a href="#contact" onclick="closeMenu()">Contact me</a>
+
+    </div>
+
+
+    <main id="home">
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero">
+
+            <div class="hero-profile">
+                <img
+                    src="./images/profile.jpg"
+                    alt="Mariana"
+                >
             </div>
-        </nav>
-    </header>
 
+            <p class="hero-greeting">
+                Hi! I'm Mariana
 
-    <main>
+                <!-- hand SVG -->
+                <svg
+                    class="hand-icon"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <path d="M18 11V6a1 1 0 0 0-2 0v4h-1V4a1 1 0 0 0-2 0v6h-1V5a1 1 0 0 0-2 0v7H9V7a1 1 0 0 0-2 0v7.5c0 2.5 2 5.5 5.5 5.5H14c3.3 0 6-2.7 6-6v-3a1 1 0 0 0-2 0Z"/>
+                </svg>
+            </p>
 
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <p class="hero-greeting">Hi, I'm</p>
+            <h1>
+                Software Developer
+            </h1>
 
-                <h1>Mariana</h1>
+            <p class="hero-description">
+                Computer Science graduate focused on building practical,
+                reliable and user-friendly web applications.
+            </p>
 
-                <h2>Junior Software Developer</h2>
+            <div class="hero-buttons">
 
-                <p>
-                    Computer Science graduate focused on backend and full-stack
-                    development. I enjoy building practical applications and
-                    turning ideas into functional software.
-                </p>
+                <a href="#contact" class="primary-button">
+                    Contact me
 
-                <div class="hero-buttons">
-                    <a href="#projects">View My Work</a>
-                    <a href="#contact">Contact Me</a>
-                </div>
+                    <!-- arrow SVG -->
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M5 11h10.6l-4.3-4.3L12.7 5l7 7-7 7-1.4-1.7 4.3-4.3H5v-2Z"/>
+                    </svg>
+                </a>
+
+                <a
+                    id="resumeButton"
+                    href="./assets/cv-eng.pdf"
+                    download
+                    class="secondary-button"
+                >
+                    My resume
+
+                    <!-- download SVG -->
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M11 3h2v10.2l3.2-3.2 1.4 1.4-5.6 5.6-5.6-5.6 1.4-1.4 3.2 3.2V3ZM5 19h14v2H5v-2Z"/>
+                    </svg>
+                </a>
+
             </div>
+
         </section>
 
 
-    <section id="about" class="about">
-        <div class="section-heading">
-            <p>Get to know me</p>
-            <h2>About Me</h2>
-        </div>
+        <!-- ================= ABOUT ================= -->
 
-        <div class="about-content">
-            <div class="about-text">
-                <p>
-                    I'm a Computer Science graduate passionate about software
-                    development, especially backend systems and web applications.
-                </p>
+        <section id="about" class="section about-section">
 
-                <p>
-                    I enjoy designing APIs, working with databases and building
-                    complete applications from the backend to the user interface.
-                </p>
+            <div class="section-heading">
 
-                <p>
-                    My goal is to create useful, reliable software while
-                    continuously improving my skills as a developer.
-                </p>
+                <p>Introduction</p>
+
+                <h2>About me</h2>
+
             </div>
 
-            <div class="about-info">
-                <div>
-                    <span>Education</span>
-                    <strong>Computer Science</strong>
+
+            <div class="about-content">
+
+                <div class="about-image-area">
+
+                    <img
+                        class="about-image"
+                        src="./images/about.jpg"
+                        alt="About Mariana"
+                    >
+
+                    <div class="circular-logo">
+                        M
+                    </div>
+
                 </div>
 
-                <div>
-                    <span>Focus</span>
-                    <strong>Backend & Full-Stack</strong>
+
+                <div class="about-text">
+
+                    <p>
+                        I'm a Computer Science graduate passionate about
+                        software development and creating useful digital
+                        experiences.
+                    </p>
+
+                    <p>
+                        My main focus is backend development with Python,
+                        while also working with modern frontend technologies
+                        to build complete applications.
+                    </p>
+
+
+                    <!-- ABOUT CARDS -->
+
+                    <div class="about-cards">
+
+                        <article class="about-card">
+
+                            <!-- Languages SVG -->
+                            <svg
+                                class="about-card-icon"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path d="M4 5a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V5Zm3-1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H7Zm1 4h8v2H8V8Zm0 4h8v2H8v-2Zm0 4h5v2H8v-2Z"/>
+                            </svg>
+
+                            <h3>Languages</h3>
+
+                            <p>
+                                Python, JavaScript, TypeScript,
+                                HTML and CSS.
+                            </p>
+
+                        </article>
+
+
+                        <article class="about-card">
+
+                            <!-- Education SVG -->
+                            <svg
+                                class="about-card-icon"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path d="m12 3 10 5-10 5L2 8l10-5Zm0 7.8L17.8 8 12 5.2 6.2 8 12 10.8ZM5 11.5l7 3.5 7-3.5v4.8l-7 3.5-7-3.5v-4.8Z"/>
+                            </svg>
+
+                            <h3>Education</h3>
+
+                            <p>
+                                Bachelor's degree in
+                                Computer Science.
+                            </p>
+
+                        </article>
+
+
+                        <article class="about-card">
+
+                            <!-- Projects SVG -->
+                            <svg
+                                class="about-card-icon"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path d="M4 4h16v16H4V4Zm2 2v12h12V6H6Zm2 2h8v2H8V8Zm0 4h5v2H8v-2Zm0 4h8v-2H8v2Z"/>
+                            </svg>
+
+                            <h3>Projects</h3>
+
+                            <p>
+                                Full-stack applications focused
+                                on real-world problems.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- TOOLS -->
+
+                    <h3 class="sub-heading">
+                        Tools I Use
+                    </h3>
+
+                    <div class="technology-grid">
+
+                        <!-- Python -->
+                        <div class="technology-icon" title="Python">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2c-4 0-4 2-4 4v2h5v1H6c-2 0-4 1.5-4 4s2 4 4 4h2v-3c0-2 2-4 4-4h4c2 0 4-2 4-4s-2-4-4-4h-4Zm-2 3a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm2 17c4 0 4-2 4-4v-2h-5v-1h7c2 0 4-1.5 4-4s-2-4-4-4h-2v3c0 2-2 4-4 4H8c-2 0-4 2-4 4s2 4 4 4h4Zm2-3a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/>
+                            </svg>
+                        </div>
+
+                        <!-- FastAPI -->
+                        <div class="technology-icon" title="FastAPI">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m13 2-9 12h6l-1 8 9-12h-6l1-8Z"/>
+                            </svg>
+                        </div>
+
+                        <!-- PostgreSQL -->
+                        <div class="technology-icon" title="PostgreSQL">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2c-4 0-7 2-7 6v4c0 2 1 3 3 3h2v3c0 2 2 4 4 4s4-2 4-4v-3h1c2 0 3-1 3-3V8c0-4-3-6-7-6h-3Zm0 2h3c3 0 5 1.5 5 4v4c0 1-.5 1-1 1h-2V9h-2v8c0 1-.8 2-2 2s-2-1-2-2v-3H8c-1 0-1-.5-1-1V8c0-2 2-4 5-4Z"/>
+                            </svg>
+                        </div>
+
+                        <!-- React -->
+                        <div class="technology-icon" title="React">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="2"/>
+                                <ellipse cx="12" cy="12" rx="9" ry="4"/>
+                                <ellipse
+                                    cx="12"
+                                    cy="12"
+                                    rx="9"
+                                    ry="4"
+                                    transform="rotate(60 12 12)"
+                                />
+                                <ellipse
+                                    cx="12"
+                                    cy="12"
+                                    rx="9"
+                                    ry="4"
+                                    transform="rotate(120 12 12)"
+                                />
+                            </svg>
+                        </div>
+
+                        <!-- Git -->
+                        <div class="technology-icon" title="Git">
+                            <svg viewBox="0 0 24 24">
+                                <path d="m21 11-8-8a1.4 1.4 0 0 0-2 0L9 5l3 3a2 2 0 1 1-1 1L8 6l-2 2 3 3v5a2 2 0 1 1-1 0v-5L5 9l-2 2a1.4 1.4 0 0 0 0 2l8 8a1.4 1.4 0 0 0 2 0l8-8a1.4 1.4 0 0 0 0-2Z"/>
+                            </svg>
+                        </div>
+
+                        <!-- Docker -->
+                        <div class="technology-icon" title="Docker">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M3 11h3V8h3v3h3V8h3v3h3c2 0 3 1 3 2 0 .5-.2 1-.5 1.5-1.5 1-3.5 1.5-6.5 1.5H8c-1 3-3 5-6 5 2-1 3-3 3-5-2-.5-3-2-3-5Z"/>
+                            </svg>
+                        </div>
+
+                    </div>
+
+
+                    <!-- WEB TECHNOLOGIES -->
+
+                    <h3 class="sub-heading">
+                        Web Technologies
+                    </h3>
+
+                    <div class="technology-grid">
+
+                        <!-- HTML -->
+                        <div class="technology-icon" title="HTML">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M4 2h16l-1.5 17L12 22l-6.5-3L4 2Zm3 4 .3 3h9.4l-.3 3H7.6l.3 3.2 4.1 1.5 4.1-1.5.3-2.2h2.1l-.6 4.8-5.9 2.2-5.9-2.2L5 6h2Z"/>
+                            </svg>
+                        </div>
+
+                        <!-- CSS -->
+                        <div class="technology-icon" title="CSS">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M4 2h16l-1.5 17L12 22l-6.5-3L4 2Zm3 4 .3 3h9.4l-.3 3H7.6l.3 3.2 4.1 1.5 4.1-1.5.3-2.2h2.1l-.6 4.8-5.9 2.2-5.9-2.2L5 6h2Z"/>
+                            </svg>
+                        </div>
+
+                        <!-- JavaScript -->
+                        <div class="technology-icon" title="JavaScript">
+                            <svg viewBox="0 0 24 24">
+                                <rect x="3" y="3" width="18" height="18" rx="1"/>
+                                <path d="M13 17c.5 1 1.2 1.5 2.2 1.5.8 0 1.3-.4 1.3-.9 0-.6-.5-.8-1.4-1.2l-.5-.2c-1.5-.7-2.5-1.4-2.5-3 0-1.5 1.2-2.6 3-2.6 1.3 0 2.3.4 3 1.7l-1.5 1c-.4-.7-.8-1-1.4-1s-1 .3-1 .8c0 .5.3.7 1.2 1.1l.5.2c1.8.8 2.8 1.5 2.8 3.1 0 1.8-1.4 2.8-3.4 2.8-1.9 0-3.1-.9-3.7-2l1.4-1.3Z"/>
+                            </svg>
+                        </div>
+
+                        <!-- TypeScript -->
+                        <div class="technology-icon" title="TypeScript">
+                            <svg viewBox="0 0 24 24">
+                                <rect x="3" y="3" width="18" height="18" rx="1"/>
+                                <path d="M6 9h8v2h-3v7H9v-7H6V9Zm8 6c.5.8 1.2 1.2 2.2 1.2.8 0 1.2-.3 1.2-.8s-.4-.7-1.3-1.1c-1.4-.6-2.1-1.2-2.1-2.4 0-1.3 1-2.2 2.6-2.2 1.1 0 2 .4 2.6 1.3l-1.3 1c-.3-.5-.7-.7-1.2-.7-.4 0-.7.2-.7.5 0 .3.3.5 1 .8 1.5.6 2.3 1.2 2.3 2.6 0 1.5-1.2 2.4-2.9 2.4-1.7 0-2.7-.8-3.2-1.7l1.2-.9Z"/>
+                            </svg>
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <div>
-                    <span>Languages</span>
-                    <strong>Portuguese · English · Japanese</strong>
-                </div>
             </div>
-        </div>
-    </section>
+
+        </section>
 
 
-    <section id="skills" class="skills">
-        <div class="section-heading">
-            <p>What I work with</p>
-            <h2>Skills</h2>
-        </div>
+        <!-- ================= SERVICES ================= -->
 
-        <div class="skills-grid">
-            <div class="skill">Python</div>
-            <div class="skill">FastAPI</div>
-            <div class="skill">React</div>
-            <div class="skill">JavaScript</div>
-            <div class="skill">PostgreSQL</div>
-            <div class="skill">SQLAlchemy</div>
-            <div class="skill">Alembic</div>
-            <div class="skill">Docker</div>
-            <div class="skill">JWT</div>
-            <div class="skill">Pytest</div>
-            <div class="skill">Git</div>
-            <div class="skill">GitHub</div>
-        </div>
-    </section>
+        <section id="services" class="section services-section">
 
+            <div class="section-heading">
 
-    <section id="projects" class="projects">
-        <div class="section-heading">
-            <p>What I've built</p>
-            <h2>Projects</h2>
-        </div>
+                <p>What I offer</p>
 
-        <div class="projects-grid">
+                <h2>My Services</h2>
 
-            <article class="project-card">
-                <span>01</span>
-                <h3>Finance Manager</h3>
+                <span>
+                    I build practical software solutions with a focus
+                    on functionality, usability and clean architecture.
+                </span>
 
-                <p>
-                    Personal finance application for tracking income, expenses,
-                    categories and balances.
-                </p>
-
-                <div class="project-tech">
-                    Python · FastAPI · PostgreSQL · React
-                </div>
-
-                <div class="project-links">
-                    <a href="https://github.com/mari-ww/finance-manager"
-                    target="_blank">GitHub ↗</a>
-                </div>
-            </article>
-
-
-            <article class="project-card">
-                <span>02</span>
-                <h3>Daily Quest</h3>
-
-                <p>
-                    Gamified productivity application that turns daily tasks
-                    into an RPG experience with XP, levels, stats, HP and Mana.
-                </p>
-
-                <div class="project-tech">
-                    Python · FastAPI · PostgreSQL · React
-                </div>
-
-                <div class="project-links">
-                    <a href="https://github.com/mari-ww/daily-quest"
-                    target="_blank">GitHub ↗</a>
-                </div>
-            </article>
-
-
-            <article class="project-card">
-                <span>03</span>
-                <h3>Writing Planner</h3>
-
-                <p>
-                    Writing management application for organizing stories,
-                    chapters, characters, notes and tasks.
-                </p>
-
-                <div class="project-tech">
-                    Python · FastAPI · PostgreSQL · JWT
-                </div>
-
-                <div class="project-links">
-                    <a href="https://github.com/mari-ww/writing-planner"
-                    target="_blank">GitHub ↗</a>
-                </div>
-            </article>
-
-        </div>
-    </section>
-
-
-    <section id="contact" class="contact">
-        <div class="section-heading">
-            <p>Let's connect</p>
-            <h2>Contact</h2>
-        </div>
-
-        <div class="contact-content">
-            <h3>Let's build something together.</h3>
-
-            <p>
-                I'm currently looking for opportunities as a Junior Software
-                Developer.
-            </p>
-
-            <div class="contact-links">
-                <a href="mailto:marianacbm2003@gmail.com">Email ↗</a>
-
-                <a href="https://github.com/mari-ww"
-                target="_blank">GitHub ↗</a>
-
-                <a href="https://www.linkedin.com/in/mariana-menezes-573888254/?locale=en-US"
-                target="_blank">LinkedIn ↗</a>
             </div>
-        </div>
-    </section>
+
+
+            <div class="services-grid">
+
+                <article class="service-card">
+
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M4 4h16v13H4V4Zm2 2v9h12V6H6Zm-4 13h20v2H2v-2Z"/>
+                        </svg>
+                    </div>
+
+                    <h3>Web Development</h3>
+
+                    <p>
+                        Responsive and modern web applications
+                        built around real user needs.
+                    </p>
+
+                    <a href="#contact">
+                        Learn more
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="m13 5 7 7-7 7-1.4-1.4 4.6-4.6H4v-2h12.2l-4.6-4.6L13 5Z"/>
+                        </svg>
+                    </a>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M4 4h16v16H4V4Zm3 3v10h10V7H7Zm2 2h6v2H9V9Zm0 4h6v2H9v-2Z"/>
+                        </svg>
+                    </div>
+
+                    <h3>Backend Development</h3>
+
+                    <p>
+                        APIs and backend systems using Python,
+                        FastAPI and relational databases.
+                    </p>
+
+                    <a href="#contact">
+                        Learn more
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="m13 5 7 7-7 7-1.4-1.4 4.6-4.6H4v-2h12.2l-4.6-4.6L13 5Z"/>
+                        </svg>
+                    </a>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M5 3h14v18H5V3Zm2 2v14h10V5H7Zm2 2h6v2H9V7Zm0 4h6v2H9v-2Zm0 4h4v2H9v-2Z"/>
+                        </svg>
+                    </div>
+
+                    <h3>Full-Stack Applications</h3>
+
+                    <p>
+                        Complete applications connecting frontend,
+                        backend and database layers.
+                    </p>
+
+                    <a href="#contact">
+                        Learn more
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="m13 5 7 7-7 7-1.4-1.4 4.6-4.6H4v-2h12.2l-4.6-4.6L13 5Z"/>
+                        </svg>
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= WORK ================= -->
+
+        <section id="work" class="section work-section">
+
+            <div class="section-heading">
+
+                <p>My portfolio</p>
+
+                <h2>My Latest Work</h2>
+
+                <span>
+                    A selection of applications I've built
+                    while developing my skills as a software developer.
+                </span>
+
+            </div>
+
+
+            <div class="projects-grid">
+
+                <!-- Finance Manager -->
+
+                <article class="project-card finance">
+
+                    <img
+                        src="./images/finance-manager.png"
+                        alt="Finance Manager"
+                    >
+
+                    <div class="project-content">
+
+                        <div>
+                            <p>Full-Stack Application</p>
+                            <h3>Finance Manager</h3>
+                        </div>
+
+                        <a
+                            href="https://github.com/mari-ww/finance-manager"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Open Finance Manager"
+                        >
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M5 11h10.6l-4.3-4.3L12.7 5l7 7-7 7-1.4-1.7 4.3-4.3H5v-2Z"/>
+                            </svg>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Daily Quest -->
+
+                <article class="project-card quest">
+
+                    <img
+                        src="./images/daily-quest.png"
+                        alt="Daily Quest"
+                    >
+
+                    <div class="project-content">
+
+                        <div>
+                            <p>Full-Stack Application</p>
+                            <h3>Daily Quest</h3>
+                        </div>
+
+                        <a
+                            href="https://github.com/mari-ww/daily-quest"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Open Daily Quest"
+                        >
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M5 11h10.6l-4.3-4.3L12.7 5l7 7-7 7-1.4-1.7 4.3-4.3H5v-2Z"/>
+                            </svg>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Writing Planner -->
+
+                <article class="project-card writing">
+
+                    <img
+                        src="./images/writing-planner.png"
+                        alt="Writing Planner"
+                    >
+
+                    <div class="project-content">
+
+                        <div>
+                            <p>Full-Stack Application</p>
+                            <h3>Writing Planner</h3>
+                        </div>
+
+                        <a
+                            href="https://github.com/mari-ww/writing-planner"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Open Writing Planner"
+                        >
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M5 11h10.6l-4.3-4.3L12.7 5l7 7-7 7-1.4-1.7 4.3-4.3H5v-2Z"/>
+                            </svg>
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="show-more">
+
+                <a
+                    href="https://github.com/mari-ww"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Show more
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="m13 5 7 7-7 7-1.4-1.4 4.6-4.6H4v-2h12.2l-4.6-4.6L13 5Z"/>
+                    </svg>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section id="contact" class="contact-section">
+
+            <div class="section-heading">
+
+                <p>Get in touch</p>
+
+                <h2>Contact with me</h2>
+
+                <span>
+                    Have a project or opportunity in mind?
+                    Feel free to get in touch.
+                </span>
+
+            </div>
+
+
+            <form class="contact-form">
+
+                <div class="form-grid">
+
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Your name"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Your email"
+                        required
+                    >
+
+                </div>
+
+
+                <textarea
+                    name="message"
+                    rows="6"
+                    placeholder="Your message"
+                    required
+                ></textarea>
+
+
+                <button type="submit">
+
+                    Send message
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M5 11h10.6l-4.3-4.3L12.7 5l7 7-7 7-1.4-1.7 4.3-4.3H5v-2Z"/>
+                    </svg>
+
+                </button>
+
+            </form>
+
+        </section>
 
     </main>
 
 
-    <script src="js/script.js"></script>
+    <!-- ================= FOOTER ================= -->
+
     <footer>
-        <p>© 2026 Mariana. Built with HTML, CSS & JavaScript.</p>
+
+        <div class="footer-main">
+
+            <a href="#home" class="footer-logo">
+                <span>M</span>ariana
+            </a>
+
+
+            <a
+                href="mailto:marianacbm2003@gmail.com"
+                class="email-link"
+            >
+
+                <!-- Mail SVG -->
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 5h18v14H3V5Zm2 2v.3l7 5 7-5V7H5Zm14 2.8-6.4 4.6a1 1 0 0 1-1.2 0L5 9.8V17h14V9.8Z"/>
+                </svg>
+
+                marianacbm2003@gmail.com
+
+            </a>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Mariana. All rights reserved.
+            </p>
+
+
+            <div class="social-links">
+
+                <a
+                    href="https://github.com/mari-ww"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/mariana-menezes-573888254/?locale=en-US"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
     </footer>
+
+
+    <script src="./script.js"></script>
+
 </body>
 </html>
